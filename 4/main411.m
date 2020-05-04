@@ -33,8 +33,6 @@ writedft2(ff,'411/ffc.bmp');
 
 
 % res2 = res .* f2 .* f1;
-% res3 = res .* conv2(f1,f2);
-% res2 = res .* convolve(f1,f2);
 % res3 = res .* ff;
 % writedft2(f1,'411/ff1.bmp');
 % writedft2(f2,'411/ff2.bmp');
@@ -42,7 +40,6 @@ writedft2(ff,'411/ffc.bmp');
 
 res1 = ff .* res;
 % res2 = uint8(real(idft2(res2,s,ss, -1)));
-% res3 = uint8(real(idft2(res3,s,ss, -1)));
 res1 = uint8(real(idft2(res1,s,ss, -1)));
 res = uint8(real(idft2(res,s,ss, -1)));
 
@@ -56,7 +53,7 @@ res = uint8(real(idft2(res,s,ss, -1)));
 % immse(res1,res2)
 immse(res0,res1)
 immse(im, res)
-% dif = res3-res2;
+
 figure,imshow([res0,res1]);
 
 
